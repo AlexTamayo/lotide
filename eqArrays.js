@@ -1,4 +1,4 @@
-// FUNCTION IMPLEMENTATION 1
+// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -19,10 +19,19 @@ const eqArrays = function(array1, array2) {
   return condition;
 };
 
-eqArrays([1, 2, 3], [1, 2, 3]); // => true
-eqArrays([1, 2, 3], [3, 2, 1]); // => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
+if (require.main === module) {
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+  console.log("This is the main module");
+
+  eqArrays([1, 2, 3], [1, 2, 3]); // => true
+  eqArrays([1, 2, 3], [3, 2, 1]); // => false
+  
+  eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
+  eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
+  
+  assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+
+}
+
+
