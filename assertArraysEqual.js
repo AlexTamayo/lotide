@@ -10,14 +10,11 @@ const eqArrays = function(array1, array2) {
   return condition;
 };
 
-const assertArraysEqual = function(actual, expected) {
-  // console.log(actual[0]);
-  // console.log(actual[1]);
-  const condition = eqArrays(actual[0], actual[1]);
-  if (condition) {
-    console.log(`✅✅✅ Assertion Passed: ${condition} === ${expected}`);
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${condition} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
   }
 };
 
@@ -27,15 +24,11 @@ if (require.main === module) {
 
   console.log("\n");
   
-  assertArraysEqual([[1, 2, 3], [1, 3, 3]], true); // => should PASS
-  assertArraysEqual([[1, 2, 3], [1, 2, 3]], true); // => should PASS
-  assertArraysEqual([[1, 2, 3], [1, 2, 3]], false); // => should PASS
-  assertArraysEqual([[1, 2, 3], [1, 3, 3]], false); // => should PASS
+  assertArraysEqual([1, 2, 3], [1, 3, 3]); // => false
+  assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+  assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+  assertArraysEqual([1, 2, 3], [1, 3, 3]); // => false
   
   console.log("\n");
-  
-  assertArraysEqual(([1, 2, 3], [1, 3, 3]), true); // => should PASS
-  assertArraysEqual(([1, 2, 3], [1, 2, 3]), true); // => should PASS
-
 }
 
