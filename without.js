@@ -18,27 +18,25 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-
 const without = function(source, itemsToRemove) {
   let newArray = [];
-  let condition = false;
+
   for (let x of source) {
+    let shouldAdd = true;
+
     for (let y of itemsToRemove) {
-      if (x !== y) {
-        condition = true;
-      } else {
-        condition = false;
+      if (x === y) {
+        shouldAdd = false;
         break;
       }
     }
-    if (condition) {
+    if (shouldAdd) {
       newArray.push(x);
     }
   }
   console.log(newArray);
   return newArray;
 };
-
 
 if (require.main === module) {
 
