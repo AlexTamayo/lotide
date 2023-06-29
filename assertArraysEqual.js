@@ -1,13 +1,20 @@
 const eqArrays = function(array1, array2) {
   let condition = false;
-  for (let i in array1) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    } else {
-      condition = true;
+  if (array1.length === 0) {
+    if (array2.length === 0) {
+      return condition = true;
     }
+  } else {
+    for (let i in array1) {
+      if (array1[i] !== array2[i]) {
+        return false;
+      } else {
+        condition = true;
+      }
+    }
+    return condition;
+    
   }
-  return condition;
 };
 
 const assertArraysEqual = function(array1, array2) {
@@ -31,4 +38,5 @@ if (require.main === module) {
   
   console.log("\n");
 }
+
 
