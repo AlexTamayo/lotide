@@ -45,6 +45,8 @@ const without = function(source, itemsToRemove) {
   return newArray;
 };
 
+
+// TEST CODE
 if (require.main === module) {
 
   console.log("This is the main module");

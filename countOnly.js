@@ -39,6 +39,8 @@ const countOnly = function(allItems, itemsToCount) {
 
 };
 
+
+// TEST CODE
 if (require.main === module) {
 
   console.log("This is the main module");

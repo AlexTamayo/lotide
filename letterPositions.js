@@ -32,6 +32,7 @@ const letterPositions =  function(string) {
 };
 
 
+// TEST CODE
 if (require.main === module) {
 
   const sampleOutput = {
@@ -46,10 +47,41 @@ if (require.main === module) {
     e: [9, 16, 22],
     n: [12]
   };
+
+  const eqArrays = function(array1, array2) {
+    let condition = false;
+    if (array1.length === 0) {
+      if (array2.length === 0) {
+        return condition = true;
+      }
+    } else {
+      for (let i in array1) {
+        if (array1[i] !== array2[i]) {
+          return false;
+        } else {
+          condition = true;
+        }
+      }
+      return condition;
+      
+    }
+  };
   
-  
+  const assertArraysEqual = function(array1, array2) {
+    if (eqArrays(array1, array2)) {
+      console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
+    } else {
+      console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
+    }
+  };
+    
   console.log(letterPositions("lighthouse in the house"));
   console.log(sampleOutput);
   console.log(letterPositions("hello"));
+
+  assertArraysEqual(letterPositions("hello")["l"], [2, 3]);
+  assertArraysEqual(letterPositions("lighthouse in the house")["h"], [3, 5, 15, 18]);
+
+  
 
 }

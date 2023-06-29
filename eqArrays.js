@@ -26,7 +26,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
+// TEST CODE
 if (require.main === module) {
 
   console.log("This is the main module");

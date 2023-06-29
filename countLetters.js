@@ -4,7 +4,6 @@ const countLetters = function(string) {
 
   for (let item of string) {
     if (item !== ' ') {
-      // console.log(`${item} is not ' '`);
       if (item in results) {
         
         results[item] += 1;
@@ -14,7 +13,6 @@ const countLetters = function(string) {
       }
     }
   }
-  // console.log(results);
   return results;
 };
 
@@ -50,5 +48,5 @@ if (require.main === module) {
   console.log(testRun);
   console.log(testResult);
 
-  // assertEqual(testRun, testResult);
+  assertEqual(testRun["h"], testResult["h"]);
 }
