@@ -1,9 +1,7 @@
 const eqArrays = function(array1, array2) {
   let condition = false;
-  if (array1.length === 0) {
-    if (array2.length === 0) {
-      return condition = true;
-    }
+  if (array1.length === 0 && array2.length === 0) {
+    return condition = true;
   } else {
     for (let i in array1) {
       if (array1[i] !== array2[i]) {
