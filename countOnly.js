@@ -24,7 +24,6 @@ const countOnly = function(allItems, itemsToCount) {
     // console.log(item);
 
     if (itemsToCount[item]) {
-
       if (results[item]) {
         results[item] += 1;
   
@@ -32,11 +31,8 @@ const countOnly = function(allItems, itemsToCount) {
         results[item] = 1;
       }
     }
-
   }
-
   return results;
-
 };
 
 
