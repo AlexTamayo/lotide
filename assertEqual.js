@@ -6,4 +6,5 @@ const assertEqual = function(actual, expected) {
   console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
 };
 
+// MODULE EXPORT
 module.exports = assertEqual;

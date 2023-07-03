@@ -1,3 +1,4 @@
+// MODULE IMPORT
 const head = require('../head');
 const assertEqual = require('../assertEqual');
 
