@@ -16,3 +16,11 @@ const eqArrays = function(array1, array2) {
 
 // MODULE EXPORT
 module.exports = eqArrays;
+
+
+// TEST CODE
+if (require.main === module) {
+
+  console.log(`This is the main module\n`);
+
+}

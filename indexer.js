@@ -71,6 +71,8 @@ fs.readdir(currentDirectory, (err, files) => {
     return fs.statSync(filePath).isFile() && fileExtension === '.js';
   }).map(file => file.slice(0, -3));
 
+  console.log(jsFiles);
+
   const content = createIndexString(jsFiles); // Capture the generated string
 
   // console.log(content);

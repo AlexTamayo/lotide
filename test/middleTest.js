@@ -9,13 +9,13 @@ const assert = require('chai').assert;
 
 describe("#middle", () => {
 
-  it("should return '[]' if only 1 element is in input array. Input: [9],\nExpected output: []", () => {
+  it("should return '[]' if only 1 element is in input array.\nInput: [9], Expected output: []", () => {
     const input = [9];
     const expectedOutput = [];
     assert.deepEqual(middle(input), expectedOutput);
   });
   
-  it("should return '[]' if only 2 element is in input array. Input: [1, 2],\nExpected output: []", () => {
+  it("should return '[]' if only 2 element is in input array.\nInput: [1, 2], Expected output: []", () => {
     const input = [1, 2];
     const expectedOutput = [];
     assert.deepEqual(middle(input), expectedOutput);

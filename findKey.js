@@ -6,7 +6,6 @@
 
 */
 
-const log = console.log;
 
 const findKey = function(object, callback) {
 
@@ -21,35 +20,13 @@ const findKey = function(object, callback) {
   return undefined;
 };
 
+
+// MODULE EXPORT
+module.exports = findKey;
+
 // TEST CODE
 if (require.main === module) {
 
-  console.log("This is the main module\n");
-  
-  const result1 = findKey({
-    "Blue Hill": { stars: 1 },
-    "Akaleri":   { stars: 3 },
-    "noma":      { stars: 2 },
-    "elBulli":   { stars: 3 },
-    "Ora":       { stars: 2 },
-    "Akelarre":  { stars: 3 }
-  }, x => x.stars === 2); // => "noma"
-
-  const assertEqual = function(actual, expected) {
-    if (!(actual === expected)) {
-      console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-      return;
-    }
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  };
-
-  assertEqual(result1, "noma");
-
+  console.log(`This is the main module\n`);
 
 }
-
-
-
-
-
-

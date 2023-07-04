@@ -8,3 +8,10 @@ const assertEqual = function(actual, expected) {
 
 // MODULE EXPORT
 module.exports = assertEqual;
+
+// TEST CODE
+if (require.main === module) {
+
+  console.log(`This is the main module\n`);
+
+}
