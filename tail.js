@@ -4,3 +4,10 @@ const tail = function(array) {
 
 // MODULE EXPORT
 module.exports = tail;
+
+// TEST CODE
+if (require.main === module) {
+
+  console.log(`This is the main module\n`);
+
+}
