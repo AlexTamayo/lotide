@@ -4,3 +4,10 @@ const head = function(array) {
 
 // MODULE EXPORT
 module.exports = head;
+
+// TEST CODE
+if (require.main === module) {
+
+  console.log(`This is the main module\n`);
+
+}
